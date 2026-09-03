@@ -1,0 +1,66 @@
+{
+  "expo": {
+    "name": "Sainn",
+    "slug": "sainn-messenger",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "owner": "sainn",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash-logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0A0F2C"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "plugins": [
+      [
+        "react-native-webrtc",
+        {
+          "cameraPermission": "Sainn needs camera access to make video calls.",
+          "microphonePermission": "Sainn needs microphone access to make calls."
+        }
+      ],
+      [
+        "react-native-ble-plx",
+        {
+          "isBackgroundEnabled": true,
+          "modes": [
+            "central",
+            "peripheral"
+          ],
+          "bluetoothAlwaysPermission": "Sainn uses Bluetooth only when you enable Offline Mode to find nearby Sainn users."
+        }
+      ]
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.sainn.messenger",
+      "icon": "./assets/icon.png",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Sainn needs camera access to make video calls.",
+        "NSMicrophoneUsageDescription": "Sainn needs microphone access to make calls.",
+        "NSBluetoothAlwaysUsageDescription": "Sainn uses Bluetooth only when you enable Offline Mode to find nearby Sainn users."
+      }
+    },
+    "android": {
+      "package": "com.sainn.messenger",
+      "permissions": [
+        "CAMERA",
+        "RECORD_AUDIO",
+        "BLUETOOTH_SCAN",
+        "BLUETOOTH_ADVERTISE",
+        "BLUETOOTH_CONNECT"
+      ],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon-foreground.png",
+        "backgroundColor": "#0A0F2C"
+      }
+    },
+    "extra": {
+      "ownerContactEmail": "tutiongpt@gmail.com"
+    }
+  }
+}

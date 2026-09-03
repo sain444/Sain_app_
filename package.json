@@ -1,0 +1,16 @@
+{
+  "name": "loom",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "server:dev": "npm run dev --workspace=loom-server",
+    "mobile:start": "npm run start --workspace=loom-mobile",
+    "infra:up": "docker compose -f infra/docker-compose.yml up -d",
+    "infra:down": "docker compose -f infra/docker-compose.yml down"
+  },
+  "author": "Sainn <tutiongpt@gmail.com>",
+  "license": "UNLICENSED"
+}
