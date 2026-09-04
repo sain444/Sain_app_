@@ -43,6 +43,7 @@ model User {
   callsInitiated        Call[]            @relation("CallInitiator")
   callParticipations    CallParticipant[]
   mediaUploadGrants     MediaUploadGrant[]
+  hiddenMessages        MessageHidden[]
 
   @@map("users")
 }
@@ -182,6 +183,7 @@ model Message {
   receipts             MessageReceipt[]
   reactions            MessageReaction[]
   pins                 PinnedMessage[]
+  hiddenBy             MessageHidden[]
 
   @@index([conversationId, createdAt])
   @@map("messages")
